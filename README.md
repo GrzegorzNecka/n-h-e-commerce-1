@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## źródła do ogarnięcia
+
+https://lms.hyperfunctor.com/courses
+https://www.youtube.com/watch?v=9iRAVASqW5g&t=295s
+
 ## Envirollment
 
 node: 18.17.0;
