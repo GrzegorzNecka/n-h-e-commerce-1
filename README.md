@@ -9,6 +9,13 @@
 - Browsers:
   - Brave
 
+## Features
+
+### i18n
+
+- [internationalization Routing](https://nextjs.org/docs/app/building-your-application/routing/internationalization)
+- [next-intl](https://next-intl-docs.vercel.app/docs/getting-started/app-router-client-components)
+
 ## Git methodology: Git Flow
 
 ### Flow
