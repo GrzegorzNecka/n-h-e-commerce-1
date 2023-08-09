@@ -15,6 +15,7 @@
 
 - [internationalization Routing](https://nextjs.org/docs/app/building-your-application/routing/internationalization)
 - [next-intl](https://next-intl-docs.vercel.app/docs/getting-started/app-router-client-components)
+- [example](https://github.com/amannn/next-intl/tree/main/examples/example-next-13)
 
 ## Git methodology: Git Flow
 
