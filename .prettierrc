@@ -3,15 +3,15 @@
   "bracketSpacing": true,
   "endOfLine": "lf",
   "importOrder": [
-    "react",
+    "^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
+    "^@components/(.*)$",
+    "^@lib/(.*)$",
     "<THIRD_PARTY_MODULES>",
-    "^@/styles/(.*)$",
-    "^@/assets/(.*)$",
-    "^@/components/(.*)$",
-    "^@/(.*)$",
-    "^[./]",
-    "^[../]"
+    "^types$",
+    "^[./]"
   ],
+  "importOrderBuiltinModulesToTop": true,
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "jsxBracketSameLine": true,

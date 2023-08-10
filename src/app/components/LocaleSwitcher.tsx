@@ -4,7 +4,7 @@ import { LOCALES } from '@/const/i18n';
 import clsx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next-intl/client';
-import { ChangeEvent, useTransition } from 'react';
+import { type ChangeEvent, useTransition } from 'react';
 
 export default function LocaleSwitcher() {
   const t = useTranslations('LocaleSwitcher');

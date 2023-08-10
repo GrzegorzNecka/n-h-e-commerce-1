@@ -1,17 +1,9 @@
-import clsx from 'clsx';
-import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import type { ReactNode } from 'react';
 import { createTranslator, NextIntlClientProvider } from 'next-intl';
-import { ReactNode } from 'react';
-
-import Navigation from '../components/Navigation';
+import Navigation from '@/app/components/Navigation';
 import { LOCALES } from '@/const/i18n';
-import BodyLayout from '../components/modules/BodyLayout';
-
-type Props = {
-  children: ReactNode;
-  params: { locale: string };
-};
+import BodyLayout from '@/app/components/modules/BodyLayout';
 
 async function getMessages(locale: string) {
   try {
@@ -25,19 +17,22 @@ export async function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params: { locale } }: Props) {
+type LocaleLayoutProps = {
+  children: ReactNode;
+  params: { locale: (typeof LOCALES)[number] };
+};
+
+export async function generateMetadata({ params: { locale } }: LocaleLayoutProps) {
   const messages = await getMessages(locale);
 
-  // You can use the core (non-React) APIs when you have to use next-intl
-  // outside of components. Potentially this will be simplified in the future
-  // (see https://next-intl-docs.vercel.app/docs/next-13/server-components).
   const t = createTranslator({ locale, messages });
 
   return {
     title: t('LocaleLayout.title'),
   };
 }
-export default async function LocaleLayout({ children, params: { locale } }: Props) {
+
+export default async function LocaleLayout({ children, params: { locale } }: LocaleLayoutProps) {
   const messages = await getMessages(locale);
 
   return (
